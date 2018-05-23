@@ -3,40 +3,90 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>zw</title>
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./layui/css/layui.css">
+  <style>
+    .menu div {
+      padding: 5px;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <table class="table table-bordered table-hover">
-      <thead>
-        <tr>
-          <th>1</th>
-          <th>1</th>
-          <th>1</th>
-          <th>1</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>22</td>
-          <td>22</td>
-          <td>22</td>
-          <td>22</td>
-        </tr>
-      </tbody>
-    </table>
-    <h1>你好世界</h1>
-    <button type="button" class="btn btn-primary" id="btn">点我</button>
-    <a href="./main.html">main.html</a>
+  <div class="layui-fluid">
+    <div class="layui-row" style="padding:10px 0">
+      <div class="layui-col-xs9 menu">
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">进货管理</button>
+        </div>
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">销货管理</button>
+        </div>
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">零售管理</button>
+        </div>
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">调拨管理</button>
+        </div>
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">采购管理</button>
+        </div>
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">订单管理</button>
+        </div>
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">业务查询</button>
+        </div>
+        <div class="layui-col-xs6">
+          <button class="layui-btn layui-btn-normal" style="width:100%">库存查询</button>
+        </div>
+      </div>
+      <div class="layui-col-xs3">
+        <img src="./images/a.jpg" alt="" style="width:100%">
+      </div>
+    </div>
+    <hr>
+    <div class="layui-row" style="padding:10px">
+      <div class="layui-col-xs8">
+        <h2>XXXXXXXXXXXX有限公司</h2>
+      </div>
+      <div class="layui-col-xs4">
+        联系电话:400-0000-000
+      </div>
+    </div>
+    <hr>
+    <div class="layui-row">
+    </div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <div class="layui-col-xs2">1</div>
+    <!-- <a href="./main.html" target="_blank">main.html</a> -->
   </div>
+
+  <script src="./layui/layui.js"></script>
   <script>
     // You can also require other files to run in this process
-    require('./renderer.js')
-    document.getElementById('btn').onclick = function () {
-      alert(this.innerHTML);
-    }
+    // require('./renderer.js');
+    layui.use(['layer', 'form'], function () {
+      var layer = layui.layer,
+        $ = layui.$,
+        form = layui.form;
+
+      $('.layui-btn-normal').click(function () {
+        layer.msg(this.innerHTML);
+      })
+    });
   </script>
 </body>
 
