@@ -28,12 +28,15 @@
       </tbody>
     </table>
     <h1>你好世界</h1>
-
+    <button type="button" class="btn btn-primary" id="btn">点我</button>
     <a href="./main.html">main.html</a>
   </div>
   <script>
     // You can also require other files to run in this process
     require('./renderer.js')
+    document.getElementById('btn').onclick = function () {
+      alert(this.innerHTML);
+    }
   </script>
 </body>
 
